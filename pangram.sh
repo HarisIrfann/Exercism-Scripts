@@ -27,7 +27,7 @@ is_pangram() {
 }
 
 # Read input from the user
-read -p "Enter the sentence: " input_sentence
+read -r -p "Enter the sentence: " input_sentence
 
 # Call the function with the input sentence
 is_pangram "$input_sentence"
