@@ -31,7 +31,7 @@ main () {
         numeric "$4" || invalid ""  
     fi
 	while [ $min -lt 0 ]; do
-		min=$(( min+(24*60) ))
+		min="$(( min+(24*60) ))"
 	done
 	
     h=$(( (min/60)%24 ))
