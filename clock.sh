@@ -25,12 +25,12 @@ main () {
 	min=$(( 60*h + m ))
 	
     if [[ $3 == "+" || $3 == "-" ]]; then
-        min=$(( min $3 $4 ))
+        min="$(( min "$3""$4" ))"
     fi
     if [[ $4 ]]; then
         numeric "$4" || invalid ""  
     fi
-	while [ $min -lt 0 ]; do
+	while [ "$min" -lt 0 ]; do
 		min="$(( min+(24*60) ))"
 	done
 	
